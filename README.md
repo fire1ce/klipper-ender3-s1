@@ -8,38 +8,6 @@ There are many github api requests for kiauh. In order to not be ratelimited you
 curl -u "fire1ce" https://api.github.com
 ```
 
-## rpi setup
-
-Install
-
-```shell
-wget https://raw.githubusercontent.com/fire1ce/debianUpdate/master/sysupgrade.sh
-sudo chmod +x sysupgrade.sh
-sudo mv sysupgrade.sh /usr/bin/sysupgrade
-```
-
-Make full dist upgrade
-
-```shell
-sysupgrade
-```
-
-Install additional packages
-
-```shell
-sudo apt install -y curl wget git dnsutils whois net-tools htop locate telnet traceroute screenfetch bpytop zsh speedtest-cli
-```
-
-- [https://github.com/th33xitus/kiauh](https://github.com/th33xitus/kiauh)
-
-Install with kiauh:
-
-- Klipper
-- Moonraker
-- Mainsail
-- Telegram Bot
-- KlipperScreen
-
 ## Install Additional Packages for "Input Shaping"
 
 ```shell
@@ -55,13 +23,8 @@ Then run the following:
 Follow this docs:
 
 - [https://www.klipper3d.org/RPi_microcontroller.html](https://www.klipper3d.org/RPi_microcontroller.html)
+- [https://github.com/th33xitus/kiauh](https://github.com/th33xitus/kiauh)
 
-## sonar and crowsnest
-
-Install:
-
-- [https://github.com/mainsail-crew/sonar](https://github.com/mainsail-crew/sonar)
-- [https://github.com/mainsail-crew/crowsnest](https://github.com/mainsail-crew/crowsnest)
 
 ## Restore the configs
 
