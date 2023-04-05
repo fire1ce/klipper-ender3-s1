@@ -3,7 +3,8 @@
 ###############
 
 # Specific to Workspace
-.Klipper-macros
+.klipper-macros
+klipper-macros/
 
 # General
 .DS_Store
