@@ -33,19 +33,15 @@ Follow this docs:
 - [https://www.klipper3d.org/RPi_microcontroller.html](https://www.klipper3d.org/RPi_microcontroller.html)
 - [https://github.com/th33xitus/kiauh](https://github.com/th33xitus/kiauh)
 
-
 ## Restore the configs
 
 Backup the original `config` folder and create a symlink to git repo `config` folder
 
 ```shell
-rm -rf /home/pi/printer_data/config
-rm -rf /home/pi/configs
-git clone git@github.com:fire1ce/ender3s1_klipper-configs.git /home/pi/printer_data/config
-ln -s /home/pi/printer_data/config /home/pi/configs
-cd /home/pi/printer_data/config
-
 cd ~
+rm -rf /home/pi/printer_data/config
+git clone git@github.com:fire1ce/klipper-mainsail.git
+ln -s /home/pi/klipper-mainsail/ /home/pi/printer_data/config
 ```
 
 ## Alias for zsh and usage
