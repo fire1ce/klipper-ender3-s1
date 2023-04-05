@@ -8,6 +8,14 @@ There are many github api requests for kiauh. In order to not be ratelimited you
 curl -u "fire1ce" https://api.github.com
 ```
 
+## Github Global Settings
+
+```shell
+git config --global pull.rebase false
+git config --global user.email "mainsailos@3os.re"
+git config --global user.name "mainsailos@3os.re"
+```
+
 ## Install Additional Packages for "Input Shaping"
 
 ```shell
@@ -36,9 +44,7 @@ rm -rf /home/pi/configs
 git clone git@github.com:fire1ce/ender3s1_klipper-configs.git /home/pi/printer_data/config
 ln -s /home/pi/printer_data/config /home/pi/configs
 cd /home/pi/printer_data/config
-git config pull.rebase false
-git config --global user.email "mainsail@3os.re"
-git config --global user.name "mainsail@3os.re"
+
 cd ~
 ```
 
