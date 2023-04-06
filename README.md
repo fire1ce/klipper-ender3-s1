@@ -61,14 +61,14 @@ oh-my-zsh config
 
 ```shell
 rm -rf /home/pi/.zshrc
-ln -s /home/pi/printer_data/config/system-configs/zshrc /home/pi/.zshrc
+ln -s /home/pi/printer_data/config/.system-configs/zshrc /home/pi/.zshrc
 ```
 
 SSH config
 
 ```shell
 mkdir -p /home/pi/.ssh
-ln -s /home/pi/printer_data/config/system-configs/ssh_config /home/pi/.ssh/config
+ln -s /home/pi/printer_data/config/.system-configs/ssh_config /home/pi/.ssh/config
 ```
 
 ## Pushing the configs to github on change
@@ -76,7 +76,7 @@ ln -s /home/pi/printer_data/config/system-configs/ssh_config /home/pi/.ssh/confi
 Set the conjob with pi user (root not needed)
 
 ```shell
-@reboot nohup /home/pi/printer_data/config/system-configs/git-push.sh >> /home/pi/git-push.log /dev/null 2>&1 &
+@reboot nohup /home/pi/printer_data/config/.system-configs/git-push.sh >> /home/pi/git-push.log /dev/null 2>&1 &
 ```
 
 ## Troubleshooting
