@@ -74,7 +74,14 @@ ln -s /home/pi/printer_data/config/.system-configs/ssh_config /home/pi/.ssh/conf
 
 ## Pushing the configs to github on change
 
-Set the conjob with pi user (root not needed)
+Install inotify-tools for watching the config folder
+
+```shell
+sudo apt-get update
+sudo apt install -y inotify-tools
+```
+
+Set the Cronjob with pi user (root not needed)
 
 ```shell
 @reboot nohup /home/pi/printer_data/config/.system-configs/git-push.sh >> /home/pi/git-push.log /dev/null 2>&1 &

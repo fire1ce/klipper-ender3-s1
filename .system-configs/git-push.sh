@@ -1,13 +1,5 @@
 #!/usr/bin/env bash
 
-# Ceack if inotifywait is installed if not install it
-if ! [ -x "$(command -v inotifywait)" ]; then
-  echo 'Error: inotifywait is not installed.' >&2
-  echo 'Installing inotifywait'
-  sudo apt-get update
-  sudo apt install -y inotify-tools
-fi
-
 path="/home/pi/printer_data/config"
 echo "Watching $path"
 
