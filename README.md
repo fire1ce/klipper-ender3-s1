@@ -67,6 +67,7 @@ ln -s /home/pi/printer_data/config/.system-configs/zshrc /home/pi/.zshrc
 SSH config
 
 ```shell
+rm -rf /home/pi/.ssh/config
 mkdir -p /home/pi/.ssh
 ln -s /home/pi/printer_data/config/.system-configs/ssh_config /home/pi/.ssh/config
 ```
