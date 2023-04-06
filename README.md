@@ -71,24 +71,6 @@ mkdir -p /home/pi/.ssh
 ln -s /home/pi/printer_data/config/system-configs/ssh_config /home/pi/.ssh/config
 ```
 
-```shell
-## Alias for zsh and usage
-
-```shell
-nano ~/.zshrc
-```
-
-```shell
-alias htop='bpytop'
-alias top='bpytop'
-alias kiauh='/home/pi/kiauh/kiauh.sh'
-alias git-push='git add . && git commit -m $(date +'%Y%m%d.%H%M') && git push'
-```
-
-```shell
-echo "usage: $ kiauh"
-```
-
 ## Push to Git every boot
 
 Set the conjob with pi user (root not needed)
