@@ -6,20 +6,20 @@ The configuration is based on mainsailos and the following guides:
 
 - [https://docs.mainsail.xyz/setup/getting-started](https://docs.mainsail.xyz/setup/getting-started)
 
-## GitHub Ratelimit
+First of all install the MainSailOS with __Raspberry Pi Imager__.
 
-There are many github api requests for kiauh. In order to not be ratelimited you should authenticate with:
-
-```shell
-curl -u "fire1ce" https://api.github.com
-```
-
-## Github Global Settings
+## Github Preparations
 
 ```shell
 git config --global pull.rebase false
 git config --global user.email "mainsailos@3os.re"
 git config --global user.name "mainsailos@3os.re"
+```
+
+There are many github api requests for kiauh. In order to not be ratelimited you should authenticate with:
+
+```shell
+curl -u "fire1ce" https://api.github.com
 ```
 
 ## Install Additional Packages for "Input Shaping"
