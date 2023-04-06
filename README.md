@@ -22,7 +22,7 @@ There are many Github api requests made by the setup. To avoid the rate limit it
 
 
 - [https://docs.github.com/en/rest/overview/authenticating-to-the-rest-api?apiVersion=2022-11-28#via-oauth-tokens](https://docs.github.com/en/rest/overview/authenticating-to-the-rest-api?apiVersion=2022-11-28#via-oauth-tokens)
-- [https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)
+- [https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-tokenasdsad)
 
 ```shell
 curl -u "fire1ce" https://api.github.com
