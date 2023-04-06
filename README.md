@@ -1,14 +1,16 @@
 # Klipper Mainsailos
 
-This is a configuration for Klipper and Mainsail on a Raspberry Pi for a __Creality Ender 3 S1 Pro__.
+This is a configuration for Klipper and Mainsail on a Raspberry Pi for a **Creality Ender 3 S1 Pro**.
 
 The configuration is based on mainsailos and the following guides:
 
 - [https://docs.mainsail.xyz/setup/getting-started](https://docs.mainsail.xyz/setup/getting-started)
 
-First of all install the MainSailOS with __Raspberry Pi Imager__.
+First of all install the MainSailOS with **Raspberry Pi Imager**.
 
 ## Github Preparations
+
+**Note:** Change the usernames and emails.
 
 ```shell
 git config --global pull.rebase false
@@ -16,7 +18,11 @@ git config --global user.email "mainsailos@3os.re"
 git config --global user.name "mainsailos@3os.re"
 ```
 
-There are many github api requests for kiauh. In order to not be ratelimited you should authenticate with:
+There are many Github api requests made by the setup. To avoid the rate limit its best to Authenticate with Github.
+
+
+- [https://docs.github.com/en/rest/overview/authenticating-to-the-rest-api?apiVersion=2022-11-28#via-oauth-tokens](https://docs.github.com/en/rest/overview/authenticating-to-the-rest-api?apiVersion=2022-11-28#via-oauth-tokens)
+- [https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)
 
 ```shell
 curl -u "fire1ce" https://api.github.com
