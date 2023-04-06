@@ -61,10 +61,17 @@ oh-my-zsh config
 
 ```shell
 rm -rf /home/pi/.zshrc
-ln -s /home/pi/printer_data/system-configs/zshrc /home/pi/.zshrc
+ln -s /home/pi/printer_data/config/system-configs/zshrc /home/pi/.zshrc
 ```
 
+SSH config
+
+```shell
+mkdir -p /home/pi/.ssh
+ln -s /home/pi/printer_data/config/system-configs/ssh_config /home/pi/.ssh/config
 ```
+
+```shell
 ## Alias for zsh and usage
 
 ```shell
