@@ -18,15 +18,15 @@ git config --global user.email "mainsailos@3os.re"
 git config --global user.name "mainsailos@3os.re"
 ```
 
-There are many Github api requests made by the setup. To avoid the rate limit its best to Authenticate with Github.
+## Raspberry Pi Configuration
 
-
-- [https://docs.github.com/en/rest/overview/authenticating-to-the-rest-api?apiVersion=2022-11-28#via-oauth-tokens](https://docs.github.com/en/rest/overview/authenticating-to-the-rest-api?apiVersion=2022-11-28#via-oauth-tokens)
-- [https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-tokenasdsad)
+Enable SPI and I2C
 
 ```shell
-curl -u "fire1ce" https://api.github.com
+sudo raspi-config
 ```
+
+Under `Interfacing Options` enable `SPI` and `I2C`
 
 ## Install Additional Packages for "Input Shaping"
 
@@ -43,7 +43,6 @@ Then run the following:
 Follow this docs:
 
 - [https://www.klipper3d.org/RPi_microcontroller.html](https://www.klipper3d.org/RPi_microcontroller.html)
-- [https://github.com/th33xitus/kiauh](https://github.com/th33xitus/kiauh)
 
 ## Restore the configs
 
