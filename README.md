@@ -81,6 +81,8 @@ sudo apt-get update
 sudo apt install -y inotify-tools
 ```
 
+Log file will be created in `/home/pi/git-push.log`
+
 Set the Cronjob with pi user (root not needed)
 
 ```shell
