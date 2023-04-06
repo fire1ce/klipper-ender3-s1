@@ -4,7 +4,7 @@
 if ! [ -x "$(command -v inotifywait)" ]; then
   echo 'Error: inotifywait is not installed.' >&2
   echo 'Installing inotifywait'
-  sudo apt update
+  sudo apt-get update
   sudo apt install -y inotify-tools
 fi
 

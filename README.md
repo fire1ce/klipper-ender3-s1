@@ -71,12 +71,12 @@ mkdir -p /home/pi/.ssh
 ln -s /home/pi/printer_data/config/system-configs/ssh_config /home/pi/.ssh/config
 ```
 
-## Push to Git every boot
+## Pushing the configs to github on change
 
 Set the conjob with pi user (root not needed)
 
 ```shell
-@reboot nohup /home/pi/printer_data/config/git-push.sh >> /home/pi/git-push.log /dev/null 2>&1 &
+@reboot nohup /home/pi/printer_data/config/system-configs/git-push.sh >> /home/pi/git-push.log /dev/null 2>&1 &
 ```
 
 ## Troubleshooting
