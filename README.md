@@ -55,6 +55,16 @@ git clone git@github.com:fire1ce/klipper-mainsail.git /home/pi/printer_data/conf
 ln -s /home/pi/printer_data/config /home/pi/configs
 ```
 
+## Setting up System Configs
+
+oh-my-zsh config
+
+```shell
+rm -rf /home/pi/.zshrc
+ln -s /home/pi/printer_data/system-configs/zshrc /home/pi/.zshrc
+```
+
+```
 ## Alias for zsh and usage
 
 ```shell
