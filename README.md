@@ -1,6 +1,6 @@
 # Klipper Mainsailos
 
-This is a configuration for Klipper and Mainsail on a Raspberry Pi 4 for a Creality Ender 3 S1 Pro.
+This is a configuration for Klipper and Mainsail on a Raspberry Pi for a __Creality Ender 3 S1 Pro__.
 
 The configuration is based on mainsailos and the following guides:
 
