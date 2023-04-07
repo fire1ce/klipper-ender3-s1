@@ -67,6 +67,10 @@ To install the macros, first clone this repository inside of your printer_data/c
 git clone https://github.com/jschuh/klipper-macros.git /home/pi/printer_data/config/klipper-macros
 ```
 
+Follow this for Slicer Configuration:
+
+- [https://github.com/jschuh/klipper-macros#slicer-configuration](https://github.com/jschuh/klipper-macros#slicer-configuration)
+
 ## Setting up System Configs
 
 oh-my-zsh config
