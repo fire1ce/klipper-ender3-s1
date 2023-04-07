@@ -2,7 +2,7 @@
 
 This is a configuration for Klipper and Mainsail on a Raspberry Pi for a **Creality Ender 3 S1 Pro**.
 
-The configuration is based on mainsailos and the following guides:
+The configuration is based on **Mainsailos** and the following guides:
 
 - [https://docs.mainsail.xyz/setup/getting-started](https://docs.mainsail.xyz/setup/getting-started)
 
@@ -55,6 +55,18 @@ git clone git@github.com:fire1ce/klipper-mainsail.git /home/pi/printer_data/conf
 ln -s /home/pi/printer_data/config /home/pi/configs
 ```
 
+## Macros
+
+We will base our macros on the following repo:
+
+- [https://github.com/jschuh/klipper-macros](https://github.com/jschuh/klipper-macros)
+
+To install the macros, first clone this repository inside of your printer_data/config directory with the following command.
+
+```shell
+git clone https://github.com/jschuh/klipper-macros.git /home/pi/printer_data/config/klipper-macros
+```
+
 ## Setting up System Configs
 
 oh-my-zsh config
@@ -72,7 +84,7 @@ mkdir -p /home/pi/.ssh
 ln -s /home/pi/printer_data/config/.system-configs/ssh_config /home/pi/.ssh/config
 ```
 
-## Pushing the configs to github on change
+## Pushing the configs to Github on change
 
 Install inotify-tools for watching the config folder
 
