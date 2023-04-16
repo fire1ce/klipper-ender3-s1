@@ -51,7 +51,7 @@ Backup the original `config` folder and create a symlink to git repo `config` fo
 ```shell
 cd ~ 
 rm -rf /home/pi/printer_data/config
-git clone git@github.com:fire1ce/klipper-mainsail.git /home/pi/printer_data/config
+git clone git@github.com:fire1ce/klipper-ender3-s1.git /home/pi/printer_data/config
 ln -s /home/pi/printer_data/config /home/pi/configs
 ```
 
