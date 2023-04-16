@@ -17,6 +17,8 @@ alias reboot="sudo reboot"
 alias poweroff="sudo poweroff"
 alias kiauh='/home/pi/kiauh/kiauh.sh'
 alias git-push='git add . && git commit -m $(date +'%Y%m%d.%H%M') && git push'
+alias klipper-restart='systemctl restart klipper'
+
 # bpytop aliases
 if which bpytop >/dev/null; then
   alias htop='bpytop'
@@ -36,3 +38,7 @@ zstyle ':bracketed-paste-magic' active-widgets '.self-*'
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
 
+# Usage Message:
+
+echo "Usage:"
+echo "Klipper Restart: $klipper-restart"
