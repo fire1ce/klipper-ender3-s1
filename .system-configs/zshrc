@@ -40,5 +40,5 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 # Usage Message:
 
-echo "Usage:"
-echo "Klipper Restart: $klipper-restart"
+echo 'Usage:'
+echo 'Klipper Restart: $klipper-restart'
