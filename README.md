@@ -113,6 +113,11 @@ Follow any errors in the log file
 sudo dmesg -w
 ```
 
+## Setting up Dynamic Print Surfaces
+
+We will Set the Z Offset of the Probe to 0.0 and use the Dynamic Print Surface feature of Macros.
+
+
 ### "Klipper" - Services
 
 ```shell
