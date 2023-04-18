@@ -109,6 +109,153 @@ Set the Cronjob with pi user (root not needed)
 
 We will Set the Z Offset of the Probe to 0.0 and use the Dynamic Print Surface feature of Macros.
 
+form `macros-init.cfg`
+we set the following:
+
+```shell
+variable_bed_surfaces: ['texture','smooth','pc',]
+```
+
+Display the surfaces with the following command `*` is the current active surface:
+
+```shell
+SET_SURFACE_ACTIVE
+``` 
+
+Let's show to to configure the `texture` surface.
+
+```shell
+SET_SURFACE_ACTIVE SURFACE=texture
+```
+
+```shell
+G28
+probe_calibrate
+abort
+```
+
+```shell
+GET_POSITION
+```
+
+Output:
+
+```shell
+mcu: stepper_x:1 stepper_y:1 stepper_z:3048
+stepper: stepper_x:115.000000 stepper_y:115.000000 stepper_z:4.957500
+kinematic: X:115.000000 Y:115.000000 Z:4.957500
+toolhead: X:115.000000 Y:115.000000 Z:4.957500 E:0.000000
+gcode: X:115.000000 Y:115.000000 Z:4.957500 E:0.000000
+gcode base: X:0.000000 Y:0.000000 Z:0.000000 E:0.000000
+gcode homing: X:0.000000 Y:0.000000 Z:0.000000
+```
+
+Do the Paper Test manually.
+
+After the Paper Test Run `GET_POSITION` again and calculate the difference.
+
+```shell
+GET_POSITION
+```
+
+Output:
+
+```shell 
+mcu: stepper_x:1 stepper_y:1 stepper_z:7
+stepper: stepper_x:115.000000 stepper_y:115.000000 stepper_z:-2.645000
+kinematic: X:115.000000 Y:115.000000 Z:-2.645000
+toolhead: X:115.000000 Y:115.000000 Z:-2.645000 E:0.000000
+gcode: X:115.000000 Y:115.000000 Z:-2.645000 E:0.000000
+gcode base: X:0.000000 Y:0.000000 Z:0.000000 E:0.000000
+gcode homing: X:0.000000 Y:0.000000 Z:0.000000
+```
+
+Offset = toolhead Init Z Value-(toolhead Z Value after Paper Test) = offset
+4.955-(-2.645) = 7.6
+7.6
+
+```shell
+SET_SURFACE_OFFSET OFFSET=2.645
+```
+
+## Klipper Screen and WaveShare 7" DSI LCD
+
+[WaveShare 7" DSI LCD Official Page](https://www.waveshare.com/wiki/7inch_DSI_LCD_(C))
+
+Install the drivers for the LCD Display
+
+[Waveshare LCD Drivers Github Page](https://github.com/waveshare/Waveshare-DSI-LCD)
+
+In my configuration i need to rotate the display and the touch input by 180°
+
+The working solution i found is to use the KlipperScreen's way to rotate the display.
+
+```shell
+sudo nano /usr/share/X11/xorg.conf.d/90-monitor.conf
+```
+
+My config:
+
+```shell
+Section "Monitor"
+    # This identifier would be the same as the name of the connector printed by xrandr.
+    # it can be "HDMI-0" "DisplayPort-0", "DSI-0", "DVI-0", "DPI-0" etc
+    Identifier "DSI-1"
+
+    # Valid rotation options are normal,inverted,left,right
+    Option "Rotate" "inverted"
+
+    # May be necesary if you are not getting your prefered resolution.
+    Option "PreferredMode" "1024x600"
+
+EndSection
+```
+
+Restart KlipperScreen Service
+
+```shell
+sudo service KlipperScreen restart
+```
+
+This should rotate the display of the KlipperScreen 180°
+
+In order to rotate the touch input we need editing the `/boot/config.txt` config.
+
+```shell
+sudo nano /boot/config.txt
+```
+At the end of the config file after installing the WaveShare Drivers you should have the following:
+
+```shell
+[all]
+ignore_lcd=1
+dtparam=i2c_vc=on
+dtoverlay=WS_xinchDSI_Screen,SCREEN_type=2,I2C_bus=1
+dtoverlay=WS_xinchDSI_Touch,I2C_bus=1
+```
+
+We need to add `invertedx,invertedy` to the `dtoverlay=WS_xinchDSI_Touch' line.
+
+The lcd part should look like this:
+
+```shell
+[all]
+ignore_lcd=1
+dtparam=i2c_vc=on
+dtoverlay=WS_xinchDSI_Screen,SCREEN_type=2,I2C_bus=1
+dtoverlay=WS_xinchDSI_Touch,I2C_bus=1,invertedx,invertedy
+```
+
+Reboot the Pi
+
+At this point the display should be rotated 180° and the touch input should be rotated 180° and klipperScreen should be working.
+
+### Install KlipperScreen
+
+Use kiauh to install KlipperScreen
+
+[kiauh Github Page](https://github.com/th33xitus/kiauh)
+
 ## Troubleshooting
 
 Follow any errors in the log file
