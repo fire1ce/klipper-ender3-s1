@@ -109,7 +109,6 @@ Set the Cronjob with pi user (root not needed)
 
 **Work In Progress**
 
-
 We will Set the Z Offset of the Probe to 0.0 and use the Dynamic Print Surface feature of Macros.
 
 form `macros-init.cfg`
@@ -136,7 +135,6 @@ G28
 probe_calibrate
 abort
 ```
-
 
 ```shell
 SET_SURFACE_OFFSET OFFSET=2.645
@@ -188,6 +186,7 @@ In order to rotate the touch input we need editing the `/boot/config.txt` config
 ```shell
 sudo nano /boot/config.txt
 ```
+
 At the end of the config file after installing the WaveShare Drivers you should have the following:
 
 ```shell
