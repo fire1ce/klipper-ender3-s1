@@ -107,6 +107,9 @@ Set the Cronjob with pi user (root not needed)
 
 ## Setting up Dynamic Print Surfaces
 
+**Work In Progress**
+
+
 We will Set the Z Offset of the Probe to 0.0 and use the Dynamic Print Surface feature of Macros.
 
 form `macros-init.cfg`
@@ -134,45 +137,6 @@ probe_calibrate
 abort
 ```
 
-```shell
-GET_POSITION
-```
-
-Output:
-
-```shell
-mcu: stepper_x:1 stepper_y:1 stepper_z:3048
-stepper: stepper_x:115.000000 stepper_y:115.000000 stepper_z:4.957500
-kinematic: X:115.000000 Y:115.000000 Z:4.957500
-toolhead: X:115.000000 Y:115.000000 Z:4.957500 E:0.000000
-gcode: X:115.000000 Y:115.000000 Z:4.957500 E:0.000000
-gcode base: X:0.000000 Y:0.000000 Z:0.000000 E:0.000000
-gcode homing: X:0.000000 Y:0.000000 Z:0.000000
-```
-
-Do the Paper Test manually.
-
-After the Paper Test Run `GET_POSITION` again and calculate the difference.
-
-```shell
-GET_POSITION
-```
-
-Output:
-
-```shell 
-mcu: stepper_x:1 stepper_y:1 stepper_z:7
-stepper: stepper_x:115.000000 stepper_y:115.000000 stepper_z:-2.645000
-kinematic: X:115.000000 Y:115.000000 Z:-2.645000
-toolhead: X:115.000000 Y:115.000000 Z:-2.645000 E:0.000000
-gcode: X:115.000000 Y:115.000000 Z:-2.645000 E:0.000000
-gcode base: X:0.000000 Y:0.000000 Z:0.000000 E:0.000000
-gcode homing: X:0.000000 Y:0.000000 Z:0.000000
-```
-
-Offset = toolhead Init Z Value-(toolhead Z Value after Paper Test) = offset
-4.955-(-2.645) = 7.6
-7.6
 
 ```shell
 SET_SURFACE_OFFSET OFFSET=2.645
