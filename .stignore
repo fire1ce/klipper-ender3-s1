@@ -74,6 +74,8 @@ printer-*
 *.chk
 *.dmp
 *.nch
+
+
 .*.swp
 *~
 
