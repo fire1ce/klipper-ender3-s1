@@ -148,6 +148,34 @@ Install the drivers for the LCD Display
 
 [Waveshare LCD Drivers Github Page](https://github.com/waveshare/Waveshare-DSI-LCD)
 
+### Install the drivers
+
+```shell
+cd ~
+git clone git@github.com:waveshare/Waveshare-DSI-LCD.git
+cd Waveshare-DSI-LCD
+```
+
+cd into the correct folder for your kernel version and the os type (32bit or 64bit)
+
+```shell
+sudo bash ./WS_xinchDSI_MAIN.sh 70C I2C1
+```
+
+### Update the drivers
+
+```shell
+cd ~/Waveshare-DSI-LCD
+git pull
+```
+
+cd into the correct folder for your kernel version and the os type (32bit or 64bit)
+
+```shell
+sudo bash ./WS_xinchDSI_MAIN.sh 70C I2C1
+```
+
+
 In my configuration i need to rotate the display and the touch input by 180°
 
 The working solution i found is to use the KlipperScreen's way to rotate the display.
