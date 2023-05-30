@@ -257,8 +257,16 @@ sudo dmesg -w
 
 ### "Klipper" - Services
 
+KlipperScreen
+
 ```shell
 systemctl status KlipperScreen
+```
+
+crowsnest
+
+```shell
+systemctl status crowsnest.service
 ```
 
 #### (EE) xf86OpenConsole: Cannot open virtual console 2 (Permission denied)
