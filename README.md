@@ -4,7 +4,7 @@
 
 :exclamation: My printer is a Creality Ender 3 S1 is **heavily modified:**
 
-<img src="https://raw.githubusercontent.com/fire1ce/klipper-ender3-s1/3f3450850ddc5503b3c7594f276be9f6308f230a/assets/72127F65-EF7B-4517-BAE0-1B71C4C8F4BF_1_102_o.jpeg" width="700"/>
+<img src="https://raw.githubusercontent.com/fire1ce/klipper-ender3-s1/3f3450850ddc5503b3c7594f276be9f6308f230a/assets/72127F65-EF7B-4517-BAE0-1B71C4C8F4BF_1_102_o.jpeg" width="500"/>
 
 :exclamation: **Use at your own risk**.
 
