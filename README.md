@@ -1,11 +1,11 @@
 # Klipper Mainsailos
 
-## Warning :exclamation:
+## :exclamation: Warning :exclamation:
 
-:exclamation: This is a work in progress and the configuration is being changed frequently. :exclamation:
+:exclamation: This is a work in progress and the configuration is being changed frequently.
 
-:exclamation: My printer is a **Creality Ender 3 S1** is heavily modified. :exclamation:
-:exclamation: **Use at your own risk** :exclamation:
+:exclamation: My printer is a Creality Ender 3 S1 is **heavily modified.**
+:exclamation: **Use at your own risk**.
 
 ## Introduction
 
