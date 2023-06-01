@@ -1,5 +1,14 @@
 # Klipper Mainsailos
 
+## Warning :exclamation:
+
+:exclamation: This is a work in progress and the configuration is being changed frequently. :exclamation:
+
+:exclamation: My printer is a **Creality Ender 3 S1** is heavily modified. :exclamation:
+:exclamation: **Use at your own risk** :exclamation:
+
+## Introduction
+
 This is a configuration for Klipper and Mainsail on a Raspberry Pi for a **Creality Ender 3 S1 Pro**.
 
 The configuration is based on **Mainsailos** and the following guides:
